@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-bg {
+  background-color: #909f9f;
+}
+.navbar-bg a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+
+.navbar-bg a:hover {
+  background-color: rgb(37, 105, 165);
+}
