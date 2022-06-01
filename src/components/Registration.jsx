@@ -27,13 +27,23 @@ const Contact = () => {
     });
   };
 
-  const dataSubmit = async (e) => {
-    e.preventDefault();
+   const dataSubmit = async (e) => {
     const newData = data;
     const res = await axios
       .post("http://localhost:3001/students", newData)
-      .then((res) => {
-        history.push("/contact");
+      .then(() => {
+        setData(
+          {
+            fname: "",
+            lname: "",
+            email: "",
+            phone: "",
+            address: "",
+            birthday: "",
+            gender: "",
+          },
+          alert("successful")
+        );
       })
       .catch((err) => {
         alert(err.message);
